@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const port = process.env.PORT || 3000;
 
 console.log(__dirname);
 console.log(__filename);
@@ -42,7 +43,7 @@ app.get('/api/posts/:year/:month',(req,res)=>{
 //     res.send('404 page');
 // });
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server is up and running on port 3000');
 })
 
